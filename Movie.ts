@@ -1,4 +1,5 @@
 import { Genre } from '../BookMyShowSystemDesign/Utils';
+import { Shows } from '../BookMyShowSystemDesign/Shows';
 export class Movie {
     movieName: string;
     movieId: number;
@@ -6,5 +7,9 @@ export class Movie {
     languages: string;
     genre: Genre;
     releaseDate: Date;
-    // cityShowMap:  Need to define
+    cityShowMap: CityShows;
 };
+
+interface CityShows {
+    [cityName: string]: Array<Shows>;
+}
